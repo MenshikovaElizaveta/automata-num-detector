@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 typedef enum {
-  DfaOk, // строка разобрана корректно
+  DfaOk,             // строка разобрана корректно
   DfaErrInvalidChar, // встретился символ, отсутствующий в алфавите
   DfaErrNotAccepting // символ в алфавите есть,
                      // но из текущего состояния нельзя никуда перейти
@@ -16,12 +16,11 @@ typedef struct {
 
 typedef struct {
   Transition *transitions; // указатель на массив всех возможных переходов
-  int numTransitions; // количество переходов
+  int numTransitions;      // количество переходов
   int *acceptStates; // указатель на массив подходящих состояний
   int numAcceptStates; // оличество подходящих состояний
-  int startState; // номер состояния, с которого всё 
+  int startState; // номер состояния, с которого всё
 } Dfa;
-
 
 // dfa - указатель на структуру автомата
 // input - проверяемая строка
