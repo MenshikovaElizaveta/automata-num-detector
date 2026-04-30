@@ -1,4 +1,8 @@
 BasedOnStyle: WebKit
 IndentWidth: 4
 ColumnLimit: 0
-KeepEmptyLinesAtTheStartOfBlocks: true
+PointerAlignment: Right
+Cpp11BracedListStyle: false
+BreakBeforeBraces: Attach
+AlignTrailingComments:
+  Kind: Leave

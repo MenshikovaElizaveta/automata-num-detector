@@ -9,8 +9,7 @@ bool dfaCheck(const Dfa *dfa, const char *input, DfaStatus *status) {
         bool found = false;
 
         for (int j = 0; j < dfa->numTransitions; j++) {
-            if (dfa->transitions[j].from == currentState &&
-                dfa->transitions[j].symbol == c) {
+            if (dfa->transitions[j].from == currentState && dfa->transitions[j].symbol == c) {
                 currentState = dfa->transitions[j].to;
                 found = true;
                 break;
